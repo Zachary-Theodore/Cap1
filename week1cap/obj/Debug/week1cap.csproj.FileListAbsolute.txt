@@ -5,3 +5,10 @@ C:\Users\bearr\Desktop\visualstudioproject\week1cap\week1cap\obj\Debug\week1cap.
 C:\Users\bearr\Desktop\visualstudioproject\week1cap\week1cap\obj\Debug\week1cap.csproj.CoreCompileInputs.cache
 C:\Users\bearr\Desktop\visualstudioproject\week1cap\week1cap\obj\Debug\week1cap.exe
 C:\Users\bearr\Desktop\visualstudioproject\week1cap\week1cap\obj\Debug\week1cap.pdb
+C:\Users\bearr\Desktop\visualstudioproject\Capstones\week1cap\week1cap\bin\Debug\week1cap.exe.config
+C:\Users\bearr\Desktop\visualstudioproject\Capstones\week1cap\week1cap\bin\Debug\week1cap.exe
+C:\Users\bearr\Desktop\visualstudioproject\Capstones\week1cap\week1cap\bin\Debug\week1cap.pdb
+C:\Users\bearr\Desktop\visualstudioproject\Capstones\week1cap\week1cap\obj\Debug\week1cap.csprojResolveAssemblyReference.cache
+C:\Users\bearr\Desktop\visualstudioproject\Capstones\week1cap\week1cap\obj\Debug\week1cap.csproj.CoreCompileInputs.cache
+C:\Users\bearr\Desktop\visualstudioproject\Capstones\week1cap\week1cap\obj\Debug\week1cap.exe
+C:\Users\bearr\Desktop\visualstudioproject\Capstones\week1cap\week1cap\obj\Debug\week1cap.pdb

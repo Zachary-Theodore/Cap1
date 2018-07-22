@@ -22,84 +22,39 @@ namespace week1cap
                 return;
             }
         }
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         static void Main()
         {
             //Takes The inputs and stores them into a string variable
             Console.WriteLine("Please Enter a Word for Translation: ");
-            string str = Console.ReadLine();
+            string str =Console.ReadLine();
+            str = str.ToLower();
+            //the line of code below looks for numbers and characters and if found reports an error meesage
+            int numChar = str.IndexOfAny("0123456789@#$%^&*()-_=+".ToCharArray());
+            if (numChar >= 0)
+            {
+                Console.WriteLine("Error: Your input contains a number or character.");
+                Conti(); 
+            }
             
-            //Searches for a first case being if the word starts with a vowel
-            //if so prints the word
-            if (str[0] == 'a' || str[0] == 'e' || str[0] == 'i' || str[0] == 'o' || str[0] == 'u')
+            else if (str[0] == 'a' || str[0] == 'e' || str[0] == 'i' || str[0] == 'o' || str[0] == 'u')
             {
                 Console.WriteLine(str + "way");
+                Conti();
             }
-
-           
-            else
-            {
-                //THis whole section is where the magic happens.
-                for (int i = 0; i < str.Length; i++)
-                {
-                    
-                    //for each of these if and else ifs the loop checks each index looking for 
-                    //a vowel, when it finds a vowel it remebers where that vowel is then
-                    // and prints from that vowel to the end of the string, then prints from
-                    //the 0 index up to right before the vowel, and then ay then breaks. 
-                  
-                        if (str[i] == 'a')
-                        {
-                            int vowelIndex = str.IndexOf('a');
-                            Console.Write(str.Substring(vowelIndex));
-                            Console.WriteLine(str.Substring(0, vowelIndex) + "ay");
-                            break;
-                        }
-                        else if (str[i] == 'e')
-                        {
-                            int vowelIndex = str.IndexOf('e');
-                            Console.Write(str.Substring(vowelIndex));
-                            Console.WriteLine(str.Substring(0, vowelIndex) + "ay");
-                            break;
-                        }
-                        else if (str[i] == 'i')
-                        {
-                            int vowelIndex = str.IndexOf('i');
-                            Console.Write(str.Substring(vowelIndex));
-                            Console.WriteLine(str.Substring(0, vowelIndex) + "ay");
-                            break;
-                        }
-                        else if (str[i] == 'o')
-                        {
-                            int vowelIndex = str.IndexOf('o');
-                            Console.Write(str.Substring(vowelIndex));
-                            Console.WriteLine(str.Substring(0, vowelIndex) + "ay");
-                            break;
-                        }
-                        else if (str[i] == 'u')
-                        {
-                            int vowelIndex = str.IndexOf('u');
-                            Console.Write(str.Substring(vowelIndex));
-                            Console.WriteLine(str.Substring(0, vowelIndex) + "ay");
-                            break;
-                        }
-                        else if (str[i] == 'y')
-                        {
-                        int vowelIndex = str.IndexOf('y');
-                        Console.Write(str.Substring(vowelIndex));
-                        Console.WriteLine(str.Substring(0, vowelIndex) + "ay");
-                        break;
-                        }
-
-                }
-                
-
+            else 
+            {       //IndexOfAny takes a list of chars and searchs the input for the first one it finds.
+                //once it finds it i set it to vowelIndex and use that Index as a boundary to print from and to
+                //in order to rearrange sections of the word. then ad "ay" on the end.
+                    int vowelIndex = str.IndexOfAny("aeiouAEIOU".ToCharArray());
+                    Console.Write(str.Substring(vowelIndex));
+                    Console.WriteLine(str.Substring(0, vowelIndex) + "ay");
+               
+                Conti();
             }
             //here we call the continue method OUTSIDE of the for loop.
-            Conti();
-
-        }
-        
+            
+        }   
     }
 }

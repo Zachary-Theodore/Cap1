@@ -29,7 +29,7 @@ namespace week1cap
             //Takes The inputs and stores them into a string variable
             Console.WriteLine("Please Enter a Word for Translation: ");
             string str =Console.ReadLine();
-            str = str.ToLower();
+            //str = str.ToLower();
             //the line of code below looks for numbers and characters and if found reports an error meesage
             int numChar = str.IndexOfAny("0123456789@#$%^&*()-_=+".ToCharArray());
             if (numChar >= 0)
